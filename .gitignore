@@ -5,3 +5,10 @@ tarpaulin-report.html
 tarpaulin-report.json
 /target
 Cargo.lock
+*.sln
+*.csproj
+obj
+*.dgspec.json
+*.assets.json
+*.props
+*.targets
