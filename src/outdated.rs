@@ -5,7 +5,7 @@ use tracing::{debug, trace, warn};
 
 /// should upgrades be locked to a specific major/minor/patch level only
 #[derive(Debug, Clone, clap::ArgEnum)]
-enum VersionLock {
+pub enum VersionLock {
     /// do not lock the version when considering upgrades
     None,
     /// lock the version to the current major version (i.e. only consider minor versions and patch levels)
@@ -38,7 +38,7 @@ impl std::fmt::Display for VersionLock {
 
 /// Should dotnet-outdated look for pre-release versions of packages?
 #[derive(Debug, Clone, clap::ArgEnum)]
-enum PreRelease {
+pub enum PreRelease {
     /// Never look for pre-releases
     Never,
     /// automatically let dotnet-outdated determine if pre-releases are appropriate to look for
