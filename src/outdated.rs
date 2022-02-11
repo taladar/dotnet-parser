@@ -83,7 +83,7 @@ pub struct DotnetOutdatedOptions {
     #[clap(
         long = "pre-release",
         value_name = "VALUE",
-        default_value = "Auto",
+        default_value = "auto",
         help = "Should dotnet-outdated look for pre-release versions of packages",
         arg_enum
     )]
@@ -126,7 +126,7 @@ pub struct DotnetOutdatedOptions {
     #[clap(
         long = "version-lock",
         value_name = "LOCK",
-        default_value = "None",
+        default_value = "none",
         help = "Should we consider all updates or just minor versions and/or patch levels",
         arg_enum
     )]
