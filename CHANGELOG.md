@@ -1,3 +1,9 @@
+## 0.1.3
+
+### Fixed
+
+fix option name typo (--transactive -> --transitive)
+
 ## 0.1.2
 
 ### Fixed

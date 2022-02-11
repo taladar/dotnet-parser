@@ -274,7 +274,7 @@ pub fn outdated(
 
     if options.transitive {
         cmd.args([
-            "--transactive",
+            "--transitive",
             "--transitive-depth",
             &options.transitive_depth.to_string(),
         ]);
