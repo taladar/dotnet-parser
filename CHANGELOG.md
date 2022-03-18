@@ -1,3 +1,10 @@
+## 0.1.4
+
+### Fixed
+
+update to build with clap 3.1
+update dependencies
+
 ## 0.1.3
 
 ### Fixed
