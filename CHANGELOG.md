@@ -1,3 +1,8 @@
+## 0.1.5
+
+Fix SPDX license expression
+Update dependencies
+
 ## 0.1.4
 
 ### Fixed
