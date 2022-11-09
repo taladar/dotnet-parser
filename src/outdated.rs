@@ -149,7 +149,7 @@ pub struct DotnetOutdatedData {
 }
 
 /// Per project data
-#[derive(Debug, serde::Serialize, serde::Deserialize)]
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "PascalCase")]
 pub struct Project {
     /// Name of the project
@@ -161,7 +161,7 @@ pub struct Project {
 }
 
 /// Per project per target framework data
-#[derive(Debug, serde::Serialize, serde::Deserialize)]
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "PascalCase")]
 pub struct Framework {
     /// Name of the framework, e.g. net5.0
@@ -171,7 +171,7 @@ pub struct Framework {
 }
 
 /// Data about each outdated dependency
-#[derive(Debug, serde::Serialize, serde::Deserialize)]
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 #[serde(rename_all = "PascalCase")]
 pub struct Dependency {
     /// Name of the dependency
@@ -185,7 +185,7 @@ pub struct Dependency {
 }
 
 /// Severity of a required upgrade
-#[derive(Debug, serde::Serialize, serde::Deserialize)]
+#[derive(Debug, Clone, serde::Serialize, serde::Deserialize)]
 pub enum Severity {
     /// a major version upgrade
     Major,
