@@ -4,20 +4,15 @@ use std::str::from_utf8;
 use tracing::{debug, trace, warn};
 
 /// should upgrades be locked to a specific major/minor/patch level only
-#[derive(Debug, Clone, clap::ArgEnum)]
+#[derive(Debug, Clone, Default, clap::ValueEnum)]
 pub enum VersionLock {
     /// do not lock the version when considering upgrades
+    #[default]
     None,
     /// lock the version to the current major version (i.e. only consider minor versions and patch levels)
     Major,
     /// lock the version to the current minor version (i.e. only consider patch levels)
     Minor,
-}
-
-impl Default for VersionLock {
-    fn default() -> Self {
-        VersionLock::None
-    }
 }
 
 impl std::fmt::Display for VersionLock {
@@ -37,20 +32,15 @@ impl std::fmt::Display for VersionLock {
 }
 
 /// Should dotnet-outdated look for pre-release versions of packages?
-#[derive(Debug, Clone, clap::ArgEnum)]
+#[derive(Debug, Clone, Default, clap::ValueEnum)]
 pub enum PreRelease {
     /// Never look for pre-releases
     Never,
     /// automatically let dotnet-outdated determine if pre-releases are appropriate to look for
+    #[default]
     Auto,
     /// Always look for pre-releases
     Always,
-}
-
-impl Default for PreRelease {
-    fn default() -> Self {
-        PreRelease::Auto
-    }
 }
 
 impl std::fmt::Display for PreRelease {
@@ -85,14 +75,13 @@ pub struct DotnetOutdatedOptions {
         value_name = "VALUE",
         default_value = "auto",
         help = "Should dotnet-outdated look for pre-release versions of packages",
-        arg_enum
+        value_enum
     )]
     pre_release: PreRelease,
     /// Dependencies that should be included in the consideration
     #[clap(
         long = "include",
         value_name = "PACKAGE_NAME",
-        multiple_occurrences = true,
         number_of_values = 1,
         help = "Dependencies that should be included in the consideration"
     )]
@@ -101,7 +90,6 @@ pub struct DotnetOutdatedOptions {
     #[clap(
         long = "exclude",
         value_name = "PACKAGE_NAME",
-        multiple_occurrences = true,
         number_of_values = 1,
         help = "Dependencies that should be excluded from consideration"
     )]
@@ -128,7 +116,7 @@ pub struct DotnetOutdatedOptions {
         value_name = "LOCK",
         default_value = "none",
         help = "Should we consider all updates or just minor versions and/or patch levels",
-        arg_enum
+        value_enum
     )]
     version_lock: VersionLock,
     /// path to pass to dotnet-outdated, defaults to current directory
