@@ -1,3 +1,7 @@
+## 0.2.1
+
+upgrade tempfile dependency
+
 ## 0.2.0
 
 upgrade dependencies including some incompatible ones
