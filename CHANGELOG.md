@@ -1,3 +1,7 @@
+## 0.2.2
+
+upgrade clap dependency
+
 ## 0.2.1
 
 upgrade tempfile dependency
