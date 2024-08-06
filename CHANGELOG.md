@@ -1,3 +1,8 @@
+## 0.2.3
+
+upgrade tempfile dependency
+update deny.toml format
+
 ## 0.2.2
 
 upgrade clap dependency
