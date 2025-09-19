@@ -177,7 +177,7 @@ pub struct Dependency {
 pub enum Severity {
     /// a major version upgrade
     Major,
-    /// a minor version uprade
+    /// a minor version upgrade
     Minor,
     /// a patch level upgrade
     Patch,
@@ -221,7 +221,7 @@ impl std::fmt::Display for IndicatedUpdateRequirement {
     }
 }
 
-/// main entry point for the dotnet-oudated call
+/// main entry point for the dotnet-outdated call
 pub fn outdated(
     options: &DotnetOutdatedOptions,
 ) -> Result<(IndicatedUpdateRequirement, DotnetOutdatedData), crate::Error> {
