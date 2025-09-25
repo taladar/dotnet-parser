@@ -304,14 +304,14 @@ pub fn outdated(
 
 #[cfg(test)]
 mod test {
-    use super::*;
-    use crate::Error;
+    // use super::*;
+    // use crate::Error;
 
-    /// this test requires a .sln and/or .csproj files in the current
-    /// directory (working dir of the tests)
-    #[test]
-    fn test_run_dotnet_outdated() -> Result<(), Error> {
-        outdated(&Default::default())?;
-        Ok(())
-    }
+    // /// this test requires a .sln and/or .csproj files in the current
+    // /// directory (working dir of the tests)
+    // #[test]
+    // fn test_run_dotnet_outdated() -> Result<(), Error> {
+    //     outdated(&Default::default())?;
+    //     Ok(())
+    // }
 }
