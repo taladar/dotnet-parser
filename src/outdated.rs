@@ -18,13 +18,13 @@ pub enum VersionLock {
 impl std::fmt::Display for VersionLock {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            VersionLock::None => {
+            Self::None => {
                 write!(f, "None")
             }
-            VersionLock::Major => {
+            Self::Major => {
                 write!(f, "Major")
             }
-            VersionLock::Minor => {
+            Self::Minor => {
                 write!(f, "Minor")
             }
         }
@@ -46,13 +46,13 @@ pub enum PreRelease {
 impl std::fmt::Display for PreRelease {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            PreRelease::Never => {
+            Self::Never => {
                 write!(f, "Never")
             }
-            PreRelease::Auto => {
+            Self::Auto => {
                 write!(f, "Auto")
             }
-            PreRelease::Always => {
+            Self::Always => {
                 write!(f, "Always")
             }
         }
@@ -186,13 +186,13 @@ pub enum Severity {
 impl std::fmt::Display for Severity {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            Severity::Major => {
+            Self::Major => {
                 write!(f, "Major")
             }
-            Severity::Minor => {
+            Self::Minor => {
                 write!(f, "Minor")
             }
-            Severity::Patch => {
+            Self::Patch => {
                 write!(f, "Patch")
             }
         }
@@ -211,10 +211,10 @@ pub enum IndicatedUpdateRequirement {
 impl std::fmt::Display for IndicatedUpdateRequirement {
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         match self {
-            IndicatedUpdateRequirement::UpToDate => {
+            Self::UpToDate => {
                 write!(f, "up-to-date")
             }
-            IndicatedUpdateRequirement::UpdateRequired => {
+            Self::UpdateRequired => {
                 write!(f, "update-required")
             }
         }
@@ -222,6 +222,10 @@ impl std::fmt::Display for IndicatedUpdateRequirement {
 }
 
 /// main entry point for the dotnet-outdated call
+///
+/// # Errors
+///
+/// fails if the dotnet outdated command fails or if the parsing of the output fails
 pub fn outdated(
     options: &DotnetOutdatedOptions,
 ) -> Result<(IndicatedUpdateRequirement, DotnetOutdatedData), crate::Error> {
