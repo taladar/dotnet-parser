@@ -31,7 +31,7 @@ version = "~1.0"
 version = "~0.1"
 
 [dependencies.tempfile]
-version = "~3.23"
+version = "~3.24"
 
 [dependencies.thiserror]
 version = "~2.0"
