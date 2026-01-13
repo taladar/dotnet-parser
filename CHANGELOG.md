@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.17 - 2026-01-13 11:42:12Z
+
+### 🐛 Bug Fixes
+
+- *(lints)* Remove lints from lib.rs
+
 ## 0.2.16 - 2026-01-13 11:39:32Z
 
 ### 🚀 Features
