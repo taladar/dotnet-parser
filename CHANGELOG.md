@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.16 - 2026-01-13 11:39:32Z
+
+### 🚀 Features
+
+- *(lints)* Update lints and deny.toml settings
+
 ## 0.2.15 - 2026-01-13 11:21:52Z
 
 ### 🚀 Features
