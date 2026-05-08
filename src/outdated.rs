@@ -297,7 +297,7 @@ pub fn outdated(
         IndicatedUpdateRequirement::UpdateRequired
     };
 
-    let output_file_content = std::fs::read_to_string(output_file)?;
+    let output_file_content = fs_err::read_to_string(output_file)?;
 
     trace!("Read output file content:\n{}", output_file_content);
 
