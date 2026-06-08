@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.20 - 2026-06-08 11:57:11Z
+
+### ⚙️ Miscellaneous Tasks
+
+- *(template)* Update to latest rust-templates standards
+- *(template)* Reconcile config with latest rust-templates lib
+- *(dependencies)* Update dependencies
+
 ## 0.2.19 - 2026-03-13 08:56:34Z
 
 ### ⚙️ Miscellaneous Tasks
